@@ -1,50 +1,23 @@
-# Welcome to your Expo app 👋
+# Rick and Morty App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+App móvil para buscar personajes de Rick and Morty por nombre o por número y ver su detalle.
 
-## Get started
+La app consulta primero mi propia API ([rick-api](https://github.com/nicolascamargom/rick-api), en Express + MySQL). Si esa API no responde, usa la [API pública de Rick and Morty](https://rickandmortyapi.com), así que siempre muestra resultados.
 
-1. Install dependencies
+## Tecnologías
+React Native · Expo Router · TypeScript
 
-   ```bash
-   npm install
-   ```
+## Pantallas
+- **Búsqueda:** escribe un nombre o un número de personaje.
+- **Detalle:** imagen y datos del personaje.
 
-2. Start the app
+<!-- Agrega aquí 2 capturas de la app. -->
 
-   ```bash
-   npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
+## Cómo correrlo
 
 ```bash
-npm run reset-project
+npm install
+npx expo start
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+Para usar tu propia API, cambia la IP `192.168.x.x:3000` en `app/(tabs)/index.tsx` y en `app/CharacterDetail.tsx` por la de tu computador.
